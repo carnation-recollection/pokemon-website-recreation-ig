@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="pokemoncss/general.css">
+    <link rel="stylesheet" href="pokemoncss/pokedex.css">
+    <link rel="stylesheet" href="pokemoncss/sortby.css">
+    <link rel="stylesheet" href="pokemoncss/font-awesome.css">
+</head>
+
+<body>   
+
+    <div class="menu">
+        <a class="link" href="./index.html">
+            <div class="main item">Main</div>
+        </a>
+        <a class="link" href="./pokedex.html">
+            <div class="pokedex item">Pokedex</div>
+        </a>
+        <div class="videogames item">Video games</div>
+        <div class="mobileapps item">Mobile apps</div>
+        <div class="cards item">Pokémon Trading Card Game Live</div>
+
+    </div>
+
+
+    <div onclick="showsearch()" class="search">
+        <img src="/images/search-svgrepo-com.svg" alt="">
+    </div>
+
+
+
+
+    <div class="graybackground">
+        <div class="searchpanel">
+            <input class="inputsearch" type="text">
+            <button class="searchbutton">
+                <img class="loupe" src="/images/search-svgrepo-com.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="mainbox">
+
+
+        <div class="midbox">
+
+
+            <div class="pokesearch">
+                <div class="panel">
+                    <img src="https://assets.pokemon.com/static2/_ui/img/chrome/notches/large-notch-darkgray.png"
+                        class="left-corner">
+                    <img src="https://assets.pokemon.com/static2/_ui/img/chrome/notches/large-notch-darkgray.png"
+                        class="right-corner">
+                </div>
+            </div>
+
+            <div class="searchbuttons">
+                <div class="imfeelinglucky" onclick="paintMeYellow()">Surprise me!</div>
+                <div class="rightpart">
+                    <div class="sortby">Sort by</div>
+                    <!-- onfocus='this.size=10;' onblur='this.size=0;' onchange='this.size=1; this.blur();' -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <form id="app-cover">
+                        <div id="select-box">
+                            <input type="checkbox" id="options-view-button">
+                            <div id="select-button" class="brd">
+                                <div id="selected-value">
+
+                                    <span>
+                                        Numbers (ascending)
+                                    </span>
+                                </div>
+                                <div id="chevrons">
+                                    <i class="fas fa-chevron-up"></i>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div id="options">
+                                <div class="option">
+                                    <input class="s-c top" type="radio" name="platform" value="codepen">
+                                    <input class="s-c bottom" type="radio" name="platform" value="codepen">
+                                    <img class="pokeball" src="images/pokeball.png" alt="">
+
+                                    <span class="label">Numbers (ascending)</span>
+                                    <span class="opt-val">Numbers (ascending)</span>
+                                </div>
+                                <div class="option">
+                                    <input class="s-c top" type="radio" name="platform" value="dribbble">
+                                    <input class="s-c bottom" type="radio" name="platform" value="dribbble">
+                                    <img class="pokeball" src="images/pokeball.png" alt="">
+                                    <span class="label">Numbers (descending)</span>
+                                    <span class="opt-val">Number (descending)</span>
+                                </div>
+                                <div class="option">
+                                    <input class="s-c top" type="radio" name="platform" value="behance">
+                                    <input class="s-c bottom" type="radio" name="platform" value="behance">
+                                    <img class="pokeball" src="images/pokeball.png" alt="">
+                                    <span class="label">A-Z</span>
+                                    <span class="opt-val">A-Z</span>
+                                </div>
+                                <div class="option">
+                                    <input class="s-c top" type="radio" name="platform" value="hackerrank">
+                                    <input class="s-c bottom" type="radio" name="platform" value="hackerrank">
+                                    <img class="pokeball" src="images/pokeball.png" alt="">
+                                    <span class="label">Z-A</span>
+                                    <span class="opt-val">Z-A</span>
+                                </div>
+
+                                <div id="option-bg"></div>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div class="pokemons">
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/006.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/007.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/008.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/009.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/010.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/011.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/012.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/013.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon ">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/014.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/015.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon ">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/016.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+
+                <div class="pokemon pokehidden">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden">
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0005</p>
+                    <b>Charmeleon</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0006</p>
+                    <b>Charizard</b>
+                    <div class="pokemon-types">
+                        <button class="button orange">Fire</button>
+                        <button class="button cyan">Flying</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0007</p>
+                    <b>Squirtle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+                <div class="pokemon pokehidden" >
+                    <img class="pokemon-image"
+                        src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png"
+                        alt="">
+                    <p>№ 0008</p>
+                    <b>Wartortle</b>
+                    <div class="pokemon-types">
+                        <button class="button blue">Water</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="plus" onclick="showpokemon()">+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>

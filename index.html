@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="pokemoncss/general.css">
+    <link rel="stylesheet" href="pokemoncss/main.css">
+
+    <link rel="stylesheet" href="pokemoncss/sortby.css">
+    <link rel="stylesheet" href="pokemoncss/font-awesome.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <a class="link" href="./index.html">
+            <div class="main item">Main</div>
+        </a>
+        <a class="link" href="./pokedex.html">
+            <div class="pokedex item">Pokedex</div>
+        </a>
+        <div class="videogames item">Video games</div>
+        <div class="mobileapps item">Mobile apps</div>
+        <div class="cards item">Pokémon Trading Card Game Live</div>
+
+    </div>
+
+
+    <div onclick="showsearch()" class="search">
+        <img src="/images/search-svgrepo-com.svg" alt="">
+    </div>
+
+
+
+
+    <div class="graybackground">
+        <div class="searchpanel">
+            <input class="inputsearch" type="text">
+            <button class="searchbutton">
+                <img class="loupe" src="/images/search-svgrepo-com.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="mainbox">
+
+
+        <div class="midbox">
+
+            <a class="adlink" href="https://legends.arceus.pokemon.com/ru-ru/">
+                <div class="wholead">
+                    <div class="ad-image">
+                        <img src="https://assets.pokemon.com/assets//cms2-ru-ru/img/video-games/_tiles/pokemon-legends-arceus/launch/pokemon-legends-arceus-875-ru.jpg"
+                            alt="">
+
+                    </div>
+
+                    <div class="ad-desc">
+                        <h3>Game <i>Pokémon Legends: Arceus</i> is now available!</h3>
+                        <p>Discover new Pokémon, meet people of the new region and reveal mysteries surrounding Arceus!
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+
+
+        </div>
+
+        <div onmousedown="swipeStart(event)" onmousemove="swipeAction(event)" onmouseup="swipeEnd()" class="pokemon-slider">
+            <div class="pokesliderwrap">
+
+
+
+
+
+                <div class="pokemoncard">
+                    <div class="pokemon-img-box">
+                        <img class="pokemon-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full//929.png"
+                            alt="" draggable="false">
+                        <div class="pokenumber">929</div>
+                    </div>
+
+                    <div class="pokemon-desc-box">
+                        <div class="pokename">
+                            <div>Dolliv</div>
+                            <div class="number">929</div>
+                        </div>
+                        <div class="typebox">
+                            <div>Type</div>
+                            <div class="type grass">Grass</div>
+                            <div class="type normal">Normal</div>
+                        </div>
+                        <div class="abilitiesbox">
+                            <div>Abilities</div>
+                            <div>Early Bird</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pokemoncard ">
+
+                    <div class="pokemon-img-box"> <img class="pokemon-img"
+                            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full//481.png" alt="" draggable="false">
+                        <div class="pokenumber">481</div>
+                    </div>
+
+                    <div class="pokemon-desc-box">
+                        <div class="pokename">
+                            <div>Mesprit</div>
+                            <div class="number">481</div>
+                        </div>
+                        <div class="typebox">
+                            <div>Type</div>
+                            <div class="type psychic">Psychic</div>
+                        </div>
+                        <div class="abilitiesbox">
+                            <div>Abilities</div>
+                            <div>Levitate</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="pokemoncard shown">
+
+                    <div class="pokemon-img-box">
+                        <img class="pokemon-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full//725.png"
+                            alt="" draggable="false">
+                        <div class="pokenumber">725</div>
+                    </div>
+
+                    <div class="pokemon-desc-box">
+                        <div class="pokename">
+                            <div>Litten</div>
+                            <div class="number">725</div>
+                        </div>
+                        <div class="typebox">
+                            <div>Type</div>
+                            <div class="type fire">Fire</div>
+                        </div>
+                        <div class="abilitiesbox">
+                            <div>Abilities</div>
+                            <div>Blaze</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="pokemoncard">
+                    <div class="pokemon-img-box"> <img class="pokemon-img"
+                            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full//481.png" alt="" draggable="false">
+                        <div class="pokenumber">481</div>
+                    </div>
+                    <div class="pokemon-desc-box">
+                        <div class="pokename">
+                            <div>Mesprit</div>
+                            <div class="number">481</div>
+                        </div>
+                        <div class="typebox">
+                            <div>Type</div>
+                            <div class="type psychic">Psychic</div>
+                        </div>
+                        <div class="abilitiesbox">
+                            <div>Abilities</div>
+                            <div>Levitate</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pokemoncard">
+                    <div class="pokemon-img-box"> <img class="pokemon-img"
+                            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full//481.png" alt="" draggable="false">
+                        <div class="pokenumber">481</div>
+                    </div>
+                    <div class="pokemon-desc-box">
+                        <div class="pokename">
+                            <div>Mesprit</div>
+                            <div class="number">481</div>
+                        </div>
+                        <div class="typebox">
+                            <div>Type</div>
+                            <div class="type psychic">Psychic</div>
+                        </div>
+                        <div class="abilitiesbox">
+                            <div>Abilities</div>
+                            <div>Levitate</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pokemoncard">
+                    <div class="pokemon-img-box">
+                        <img class="pokemon-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full//929.png"
+                            alt="" draggable="false">
+                        <div class="pokenumber">929</div>
+                    </div>
+                    <div class="pokemon-desc-box">
+                        <div class="pokename">
+                            <div>Mesprit</div>
+                            <div class="number">481</div>
+                        </div>
+                        <div class="typebox">
+                            <div>Type</div>
+                            <div class="type psychic" >Psychic</div>
+                        </div>
+                        <div class="abilitiesbox">
+                            <div>Abilities</div>
+                            <div>Levitate</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="pokemoncard">
+                    <div class="pokemon-img-box">
+                        <img class="pokemon-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full//929.png"
+                            alt="" draggable="false">
+                        <div class="pokenumber">929</div>
+
+                    </div>
+
+                    <div class="pokemon-desc-box">
+                        <div class="pokename">
+                            <div>Mesprit</div>
+                            <div class="number">481</div>
+                        </div>
+                        <div class="typebox">
+                            <div>Type</div>
+                            <div class="type psychic">Psychic</div>
+                        </div>
+                        <div class="abilitiesbox">
+                            <div>Abilities</div>
+                            <div>Levitate</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="arrow arrowleft" onclick="sliderScrollLeft()">
+
+            </div>
+
+            <div class="arrow arrowright" onclick="sliderScrollRight()">
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="plus" onclick="showpokemon()">+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>

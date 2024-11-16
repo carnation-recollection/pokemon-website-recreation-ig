@@ -1,0 +1,310 @@
+.ad-image {
+
+
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.midbox {
+
+    padding: 13px;
+}
+
+.ad-desc {
+    background-color: #a4a4a4;
+    width: 100%;
+    height: 125px;
+
+    padding: 20px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 4px;
+    color: #212121;
+    font-weight: 500;
+}
+
+p {
+    color: #616161;
+    margin: 0;
+}
+
+.wholead {
+    cursor: pointer;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-top: 20px;
+    transition: 0.4s;
+
+}
+
+
+.wholead:hover .ad-desc {
+
+    background-color: #cacaca
+}
+
+.wholead:hover {
+    box-shadow: 1px 1px 10px #00000063;
+    transform: scale(1.004) rotate(0.5deg);
+}
+
+.adlink {
+    text-decoration: none;
+}
+
+.pokemon-slider {
+    width: 100%;
+    height: 383px;
+    background-color: #212121;
+    position: relative;
+    margin-bottom: 165px;
+    user-select: none;
+}
+
+.mainbox {
+    overflow: hidden;
+}
+
+.pokemoncard {
+    background-color: #313131;
+    width: 250px;
+    height: 380px;
+    transition: var(--transitiontime);
+
+}
+
+.pokemon-img {
+    width: 100%;
+    height: 250px
+}
+
+/* .pokename {
+    background-color: #313131;
+} */
+
+
+
+.pokenumber {
+    z-index: 29;
+    position: absolute;
+    color: #525252;
+    font-size: 100px;
+    font-weight: bold;
+    top: 1px;
+    right: 50%;
+    transform: translatex(50%);
+    transition: var(--transitiontime);
+}
+
+.pokename {
+	color: #fff;
+	font-size: 25px;
+  
+	padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+	display: flex;	
+    justify-content: space-between;
+}
+
+
+
+
+.type {
+    padding: 4px 6px;
+    border-radius: 4px 4px 4px 4px;
+    margin-right: 4px;
+}
+.fire {
+    background-color: #fd7d24;
+    background: linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);;
+    color: #fff;
+}
+.psychic {
+    background-color: #f366b9;
+    background: linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+    color: #fff;
+}
+.grass{
+    background-color: #9bcc50;
+    background: linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+    color: #212121;
+}
+.normal{
+    background-color: #a4acaf;
+    background: linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+    color: #212121;
+}
+
+.pokemon-img-box {
+	position: relative;
+	background-color: #616161;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	transition: var(--transitiontime);
+}
+
+
+.pokemoncard.shown {
+    width: 360px;
+    height: 380px;
+    background-color: #232323
+}
+
+.shown .pokenumber {
+    transform: translatex(50%);
+    color: #616161;
+    font-size: 140px;
+}
+
+.shown .pokemon-img-box {
+    background-color: #525252;
+}
+
+.pokesliderwrap {
+    display: flex;
+    gap: 3px;
+    width: 2177px;
+    transition: 0.5s;
+    /* transform: translatex(-55px); */
+    will-change: transform;
+    cursor: grab
+
+}
+
+
+.pokesliderwrap.noTransition {
+	transition: none;
+    cursor: grabbing
+}
+
+
+.arrow {
+    width: 76px;
+    height: 94px;
+    background-color: #212121;
+    z-index: 130;
+    position: absolute;
+    bottom: 50%;
+    transform: translatey(50%);
+    background: url("https://assets.pokemon.com/static2/_ui/img/chrome/slider-btns.png") no-repeat 0 0;
+    width: 76px;
+    height: 94px;
+    opacity: 0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.pokemon-slider:hover .arrow {
+	opacity: 0.4;
+}
+
+.arrowright {
+    right: 70px;
+    background-position: -100px 0;
+}
+
+.arrowleft {
+    left: 70px;
+}
+
+.pokemon-slider .arrow:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Анимация при класе ШОВН */ 
+:root{
+    --transitiontime: 0.35s;
+}
+.pokemon-img {
+    width: 250px;
+    z-index: 30;
+    position: relative;
+    opacity: 0.6;
+    transition: var(--transitiontime);
+}
+
+.shown .pokemon-img {
+    opacity: 1;
+    width: 250px;
+    transform: scale(1.25) translateY(-15px);
+}
+
+.pokemon-desc-box {
+	background-color: #313131;
+    position: relative; 
+    width: 250px;
+    height: 114px;
+    transition: var(--transitiontime);
+}
+
+.shown .pokemon-desc-box {
+	height: 175px;
+	background-color: #232323;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+    left: -3px;
+    width: 366px;
+}
+
+.number {
+    transition: var(--transitiontime);
+    opacity: 0;
+}
+
+.shown .number {
+    opacity: 1;
+}
+
+
+.typebox {
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    width: 100%;
+  
+    align-items: center;   
+    padding-bottom: 14px;
+    opacity: 0;
+    transition: var(--transitiontime);
+}
+
+.shown .typebox {
+    opacity: 1;
+}
+
+.typebox > div:first-child,
+.abilitiesbox > div:first-child{
+    width: 30%;
+}
+
+.abilitiesbox {
+    opacity: 0;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    width: 100%;
+ 
+    padding-top: 0;
+    transition: var(--transitiontime);
+}
+
+.shown .abilitiesbox {
+    opacity: 1;
+}
+
+
+
+/* Анимация при класе ШОВН КОНЕЦ*/ 
