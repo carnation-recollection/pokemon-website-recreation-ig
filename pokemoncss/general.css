@@ -398,7 +398,7 @@ option {
 }
 
 .panel {
-	width: 480px;
+	width: 60%;
 	height: 52px;
 	background-color: #616161;
 	margin-left: auto;
