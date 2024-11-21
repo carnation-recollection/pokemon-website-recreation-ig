@@ -17,8 +17,12 @@ body {
 	border-radius: 6px;
 	/* margin-left: 15px; */
 	margin-top: 5px;
-	width: 85px;
-	height: 22px;
+	width: 49px;
+	height: 24px;
+	font-size: 12px;
+	text-align: center;
+	/*! display: flex; */
+	justify-content: center;
 }
 
 .orange {
@@ -43,7 +47,7 @@ body {
 
 
 b {
-	font-size: 21px;
+	font-size: 19px;
 	margin-left: 14px;
 }
 
@@ -537,7 +541,7 @@ option {
 
 	.pokemon {
 		/* width: fit-content; */
-		width: 27%;
+		width: 28%;
 	}
 
 	.pokemons {
@@ -566,8 +570,8 @@ option {
 
 	.pokemons {
 		column-gap: 6%;
-		padding-left: 6%;
-		padding-right: 6%;
+		padding-left: 3%;
+		padding-right: 3%;
 
 	}
 
