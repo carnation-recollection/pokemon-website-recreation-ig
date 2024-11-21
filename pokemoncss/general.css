@@ -238,9 +238,10 @@ b {
 
 .searchbuttons {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column-reverse;
 	justify-content: space-around;
 	align-items: center;
+	gap: 12px;
 }
 
 
@@ -265,6 +266,7 @@ b {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	gap: 10px;
 }
 
 
@@ -521,7 +523,7 @@ option {
 	}
 
 	.imfeelinglucky {
-		width: 90%;
+		width: 166px;
 		margin-left: auto;
 		margin-right: auto;
 	}
