@@ -183,9 +183,15 @@ b {
 	align-items: center;
 }
 
+.sandwich {
+	display: none;
+	width: 40px;
+	margin-right: 19px;
+}
+
 .link {
-	height: 100%;
 	text-decoration: none;
+	color: #464646;
 }
 
 
@@ -551,6 +557,21 @@ option {
 
 	}
 
+
+}
+
+@media (max-width:600px){
+	.menu > *:not(.sandwich) {
+		display: none;
+	}
+
+	.menu {
+		justify-content: right;
+	}
+
+	.sandwich {
+		display: block;
+	}
 
 }
 
