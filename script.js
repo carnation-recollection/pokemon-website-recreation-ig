@@ -318,13 +318,23 @@ function addEvent(obj, evt, fn) {
     }
 }
 
+let sliderBlock =  document.querySelector(".pokesliderwrap") 
 
-addEvent(document, "mouseout", function(e) {
-    e = e ? e : window.event;
-    var from = e.relatedTarget || e.toElement;
-    if (!from || from.nodeName == "HTML") {
-        // stop your drag event here
-        // for now we can just use an alert
-        swipeEnd()
-    }
-});
+ //slider ne pokazan na stranice 
+if(sliderBlock == null ){
+    // nichego
+}
+else {
+
+    // прекращаем прокрутку слайдера когда мышка покидает страницу
+    addEvent(document, "mouseout", function(e) {
+        e = e ? e : window.event;
+        var from = e.relatedTarget || e.toElement;
+        if (!from || from.nodeName == "HTML") {
+            // stop your drag event here
+            // for now we can just use an alert
+            swipeEnd()
+        }
+    });
+
+}
