@@ -37,7 +37,7 @@
     top: 0;
     right: 0;
     left: 0;
-    width: 219px;
+    width: 228px;
     height: 42px;
     z-index: 1;
   }
@@ -115,7 +115,7 @@
     top: 45px;
     right: 0;
     left: 0;
-    width: 217px;
+    width: 226px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 7px;
@@ -167,7 +167,7 @@
   #options-view-button:checked ~ #options .label {
     display: block;
     padding: 12px 14px;
-    font-size: 15px;
+    font-size: 16px;
   }
   
   .s-c {
@@ -240,6 +240,7 @@
   
   .label {
     transition: 0.3s ease all;
+    font-family: "Roboto" !important;
   }
   
   .opt-val {
@@ -250,6 +251,7 @@
     opacity: 0;
     background-color: #fff;
     transform: scale(0);
+    font-family: "Roboto" !important;
   }
  
    .option input[type="radio"]:checked ~ .opt-val {

@@ -184,16 +184,33 @@ b {
 }
 
 .sandwich {
-	display: none;
 	width: 40px;
-	margin-right: 19px;
 }
+
+
+.sandwich-box {
+	display: none;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	cursor: pointer;
+}
+
 
 .link {
 	text-decoration: none;
 	color: #464646;
+
 }
 
+.menu .item .link {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .plus {
 	background-color: #4592c4;
@@ -212,7 +229,7 @@ b {
 	cursor: pointer;
 	overflow: hidden;
 	border-top-left-radius: 10px;
-	user-select: none;	
+	user-select: none;
 }
 
 .plus:hover {
@@ -276,7 +293,7 @@ b {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: 10px;
+	gap: 20px;
 }
 
 
@@ -323,6 +340,11 @@ option {
 }
 
 .item:hover {
+	color: #FFFFFF;
+}
+
+.item:hover,
+.item:hover>a {
 	color: #FFFFFF;
 }
 
@@ -469,13 +491,13 @@ option {
 
 .search img {
 	width: 30px;
-
 }
 
 
-
-
-
+.mobileMenu {
+	display: none;
+	
+}
 
 
 
@@ -519,6 +541,13 @@ option {
 
 }
 
+@media (max-width:1000px) {
+	.mainbox {
+		margin-top: 60px;
+	}
+}
+
+
 @media (max-width:920px) {
 	.cards.item {
 		margin-right: 0;
@@ -560,18 +589,106 @@ option {
 
 }
 
-@media (max-width:600px){
-	.menu > *:not(.sandwich) {
+@media (max-width:600px) {
+
+
+	.menu>*:not(.sandwich-box):not(.mobileMenu) {
 		display: none;
 	}
+
+	.search {
+		top: 0px;
+		height: 75px;
+		width: 75px;
+		background-size: 100% 100%;
+		display: flex;
+		/*! padding-bottom: 27px; */
+
+	}
+
+
+	.mobileMenu {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 75px;		
+		width: 200px;
+	}
+	.item {
+		width: 100%;
+		padding: 18px 30px;
+		height: auto;
+	}
+
+	.item:hover, .item:hover > a {
+		color: initial;
+	} 
+	
+
+
+
+
+
+	.search {
+		position: relative;
+		background-image: none;
+
+		top: 0px;
+		height: 75px;
+		width: 75px;
+		background-repeat: no-repeat;
+		padding: 14px;
+		/*! padding-top: 18px; */
+		cursor: pointer;
+		position: fixed;
+		cursor: pointer;
+		z-index: 111;
+
+
+	}
+
+	.search:hover {
+		background-image: none;
+	}
+
+	.search:hover img {
+
+		filter: invert(100%);
+	}
+
+	.search img {
+		width: 35px;
+
+		filter: invert(64%);
+		margin-left: 6px;
+		transition: 0.15s;
+	}
+
 
 	.menu {
 		justify-content: right;
 	}
 
-	.sandwich {
-		display: block;
+	.sandwich-box {
+		display: flex;
 	}
+
+	.sandwich {
+		filter: invert(39%);
+		cursor: pointer;
+		transition: 0.15s;
+	}
+
+	.sandwich:hover {
+		filter: invert(10%);
+		cursor: pointer;
+	}
+
+	.mainbox {
+		margin-top: 60px;
+	}
+
+
 
 }
 
@@ -579,9 +696,7 @@ option {
 @media (max-width:520px) {
 
 
-	.search {
-		top: 90px;
-	}
+
 
 
 	.pokemon {
@@ -596,9 +711,9 @@ option {
 
 	}
 
-	.menu {
+	/* .menu {
 		height: 90px;
-	}
+	} */
 
 	.item {
 		font-size: 15px;
@@ -608,6 +723,14 @@ option {
 	.cards.item {
 		font-size: 12px;
 		padding: 7px;
+	}
+
+	.searchpanel {
+		width: 90%;
+	}
+
+	.inputsearch {
+		width: 90%
 	}
 
 
