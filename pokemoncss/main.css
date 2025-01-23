@@ -1,4 +1,4 @@
-.ad-image {
+.ad-image-wrap {
 
 
     background-color: black;
@@ -6,6 +6,9 @@
     overflow: hidden;
 }
 
+.ad-image {
+	width: 100%;
+}
 
 .midbox {
 
