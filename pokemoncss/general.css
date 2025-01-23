@@ -468,7 +468,7 @@ option {
 
 .search {
 	position: relative;
-	background-image: url("/images/profile-nav-search-bg.png");
+	background-image: url("../images/profile-nav-search-bg.png");
 	left: 37px;
 	top: 250px;
 	height: 67px;
@@ -486,7 +486,7 @@ option {
 
 
 .search:hover {
-	background-image: url("/images/profile-nav-search-bg-hover.png");
+	background-image: url("../images/profile-nav-search-bg-hover.png");
 }
 
 .search img {
