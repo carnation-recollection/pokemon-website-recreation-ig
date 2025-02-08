@@ -1,15 +1,52 @@
-console.log("hello world")
-// alert("123123")
-// prompt("Как тебя зовут?")
-let myName = "dima"
-console.log("Меня зовут " + myName)
-myName = "Vasya"
-console.log("Меня зовут " + myName)
-let myAge = 134
-console.log("My age " + myAge)
-console.log((myAge - 5) / 3)
-myAge = myAge - 100
-console.log(myAge)
+// console.log("hello world")
+// // alert("123123")
+// // prompt("Как тебя зовут?")
+// let myName = "dima"
+// console.log("Меня зовут " + myName)
+// myName = "Vasya"
+// console.log("Меня зовут " + myName)
+// let myAge = 134
+// console.log("My age " + myAge)
+// console.log((myAge - 5) / 3)
+// myAge = myAge - 100
+// console.log(myAge)
+
+const половинаЭкрана = document.querySelector(".mainbox").clientWidth * 0.5
+const карточка = document.querySelector(".pokemoncard").clientWidth + window.getComputedStyle(document.querySelector(".pokesliderwrap"), null).getPropertyValue("gap").slice(0, -2)/2
+
+// номер активной карточки 
+let currentСard = 1
+
+if (половинаЭкрана * 2 > 500) {
+
+    let точка = 0
+    let шаг = 0
+
+    for (i = 0; i < 7; i++) {
+        точка = точка + карточка
+        if (половинаЭкрана - точка >= 0) {
+            шаг = i
+        }
+        else {
+            break;
+        }
+
+    }
+
+    console.log("номер активной карты = ", шаг + 2)
+    document.querySelectorAll(".pokemoncard")[шаг + 1].classList.add("shown")
+    currentСard= шаг + 2
+}
+else {
+    document.querySelectorAll(".pokemoncard")[0].classList.add("shown")
+}
+
+// console.log("весь экран ",половинаЭкрана*2)
+// console.log("половина ",половинаЭкрана)
+// console.log(числа)
+// let миниум = Math.min(...числа)
+// console.log("минимум ",миниум)
+
 
 
 // переменная с большим невидимым окном с поиском
@@ -84,8 +121,8 @@ function offset(el) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
 
-// номер активной карточки 
-let currentСard = 3
+
+
 
 // проматывает слайдер влево
 function sliderScrollLeft() {
@@ -199,32 +236,32 @@ function swipeAction(событие) {
             кудаМотаем = "в право"
         }
 
-        console.log(кудаМотаем)      
+        console.log(кудаМотаем)
 
 
 
         if (sliderPosition >= 430 && кудаМотаем == "в лево") {
 
             let shift = (currentPoint - clickStartPoint) + savedPosition
-            console.log("Сдвиг = ", currentPoint- clickStartPoint )
-            console.log("Текущая точка = ", currentPoint )
+            console.log("Сдвиг = ", currentPoint - clickStartPoint)
+            console.log("Текущая точка = ", currentPoint)
             //if()
-            let test = 430 +(currentPoint- clickStartPoint )/4
-            console.log("Ставлю на позицию",test )
+            let test = 430 + (currentPoint - clickStartPoint) / 4
+            console.log("Ставлю на позицию", test)
             moveSliderTo(test)
 
-// РАЗОБРАТЬСЯ ЧТО ТУТ ДЕЛИТЬ НА 10 ЧТОБ МЕДЛЕННО ДВИГАЛОСЬ 
+            // РАЗОБРАТЬСЯ ЧТО ТУТ ДЕЛИТЬ НА 10 ЧТОБ МЕДЛЕННО ДВИГАЛОСЬ 
 
             // let shift = (currentPoint - clickStartPoint) + savedPosition
             // console.log("Сдвиг = ", currentPoint - clickStartPoint)
             // // двигаем слайдер
             // moveSliderTo(shift)
 
-            // let changePoint = 251.5 * (currentСard - 3)
+            // let changePoint = карточка * (currentСard - 3)
 
             // // если мы мотали и дошли до точек -250, -500, -750 ..... и тд
             // // то переключаем карточку на следующую
-            // if (-251.5 * (currentСard - 2) < sliderPosition) {
+            // if (-карточка * (currentСard - 2) < sliderPosition) {
             // }
             // else {
             //     currentСard = currentСard + 1
@@ -233,7 +270,7 @@ function swipeAction(событие) {
 
             // // если мы мотали и дошли до точек -250, -500, -750 ..... и тд
             // // то переключаем карточку на предыдущую
-            // if (-251.5 * (currentСard - 3) < sliderPosition) {
+            // if (-карточка * (currentСard - 3) < sliderPosition) {
             //     currentСard = currentСard - 1
             //     setCardActive(currentСard)
             // }
@@ -253,12 +290,12 @@ function swipeAction(событие) {
             console.log("Слайдер-позиция = ", shift)
             // двигаем слайдер
             moveSliderTo(shift)
-           
-            let changePoint = 251.5 * (currentСard - 3)
+
+            let changePoint = карточка * (currentСard - 3)
 
             // если мы мотали и дошли до точек -250, -500, -750 ..... и тд
             // то переключаем карточку на следующую
-            if (-251.5 * (currentСard - 2) < sliderPosition) {
+            if (-карточка * (currentСard - 2) < sliderPosition) {
             }
             else {
                 currentСard = currentСard + 1
@@ -267,7 +304,7 @@ function swipeAction(событие) {
 
             // если мы мотали и дошли до точек -250, -500, -750 ..... и тд
             // то переключаем карточку на предыдущую
-            if (-251.5 * (currentСard - 3) < sliderPosition) {
+            if (-карточка * (currentСard - 3) < sliderPosition) {
                 currentСard = currentСard - 1
                 setCardActive(currentСard)
             }
@@ -286,7 +323,7 @@ function swipeAction(событие) {
 }
 
 function swipeEnd() {
-    if(sliderPosition > 430){
+    if (sliderPosition > 430) {
         moveSliderTo(430)
     }
     // при отпускании мыши
@@ -318,16 +355,16 @@ function addEvent(obj, evt, fn) {
     }
 }
 
-let sliderBlock =  document.querySelector(".pokesliderwrap") 
+let sliderBlock = document.querySelector(".pokesliderwrap")
 
- //slider ne pokazan na stranice 
-if(sliderBlock == null ){
+//slider ne pokazan na stranice 
+if (sliderBlock == null) {
     // nichego
 }
 else {
 
     // прекращаем прокрутку слайдера когда мышка покидает страницу
-    addEvent(document, "mouseout", function(e) {
+    addEvent(document, "mouseout", function (e) {
         e = e ? e : window.event;
         var from = e.relatedTarget || e.toElement;
         if (!from || from.nodeName == "HTML") {
