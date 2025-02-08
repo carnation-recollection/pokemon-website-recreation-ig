@@ -11,35 +11,6 @@
 // myAge = myAge - 100
 // console.log(myAge)
 
-const половинаЭкрана = document.querySelector(".mainbox").clientWidth * 0.5
-const карточка = document.querySelector(".pokemoncard").clientWidth + window.getComputedStyle(document.querySelector(".pokesliderwrap"), null).getPropertyValue("gap").slice(0, -2)/2
-
-// номер активной карточки 
-let currentСard = 1
-
-if (половинаЭкрана * 2 > 500) {
-
-    let точка = 0
-    let шаг = 0
-
-    for (i = 0; i < 7; i++) {
-        точка = точка + карточка
-        if (половинаЭкрана - точка >= 0) {
-            шаг = i
-        }
-        else {
-            break;
-        }
-
-    }
-
-    console.log("номер активной карты = ", шаг + 2)
-    document.querySelectorAll(".pokemoncard")[шаг + 1].classList.add("shown")
-    currentСard= шаг + 2
-}
-else {
-    document.querySelectorAll(".pokemoncard")[0].classList.add("shown")
-}
 
 // console.log("весь экран ",половинаЭкрана*2)
 // console.log("половина ",половинаЭкрана)
@@ -63,6 +34,38 @@ function closesearch() {
     grayBox.style.opacity = 0
     grayBox.style.visibility = "hidden"
 }
+
+
+let mobileMenu = document.querySelector(".mobileMenu")
+let sandwich = document.querySelector(".sandwich-box")
+
+function showMobileMenu() {
+    mobileMenu.style.opacity = 1
+    mobileMenu.style.visibility = "visible"
+}
+
+function closeMobileMenu() {
+    mobileMenu.style.opacity = 0
+    mobileMenu.style.visibility = "hidden"
+}
+
+let меню = "закрыто"
+function переключитьМеню(){
+    if(меню == "открыто" ){
+        closeMobileMenu()
+        меню = "закрыто"
+    }    
+    else {
+        showMobileMenu()
+        меню = "открыто"
+    }
+}
+
+//при клике по грей боксу окно будет закрываться 
+sandwich.addEventListener("click", function (e) {
+    переключитьМеню()
+});
+
 
 //при клике по грей боксу окно будет закрываться 
 grayBox.addEventListener("click", function (e) {

@@ -607,11 +607,14 @@ option {
 
 
 	.mobileMenu {
+		opacity: 0;
+		visibility: hidden;
 		display: flex;
 		flex-direction: column;
 		position: fixed;
 		top: 75px;		
 		width: 100%;
+		transition: 0.3s;
 	}
 	.item {
 		width: 100%;
