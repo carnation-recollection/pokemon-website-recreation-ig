@@ -611,7 +611,7 @@ option {
 		flex-direction: column;
 		position: fixed;
 		top: 75px;		
-		width: 200px;
+		width: 100%;
 	}
 	.item {
 		width: 100%;
@@ -715,8 +715,8 @@ option {
 	} */
 
 	.item {
-		font-size: 15px;
-		padding: 5px;
+		font-size: 25.1px;
+     padding: 17.6px;
 	}
 
 	.cards.item {
