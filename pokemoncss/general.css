@@ -618,7 +618,7 @@ option {
 	}
 	.item {
 		width: 100%;
-		padding: 18px 30px;
+	
 		height: auto;
 	}
 
@@ -719,7 +719,7 @@ option {
 
 	.item {
 		font-size: 25.1px;
-     padding: 17.6px;
+		height: 73.7px;
 	}
 
 	.cards.item {
