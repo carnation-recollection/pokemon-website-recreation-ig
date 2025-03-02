@@ -320,28 +320,41 @@ p {
     }
     .adImageBg {
         /* position: absolute; */
-        top:50.9px;
-        left: 303.3px;
-        width: 80%;
-        padding: 5%
+
+        width: 100%;
+        /*! padding: 5% */
         /* height: 100%; */
     }
     .mobile-ad {
         display: flex;
-        justify-content: center;
+        align-items: center;
         margin-top: 23.3px;
         margin-bottom: 8.9px;
+        flex-direction: column;
     }
 
     .adDesc {
-        margin-bottom: 50px;
+        padding-bottom: 20.5px;
         text-align: center;
-        margin-left: 8%;
-        margin-right: 8%;
+        padding-left: 8%;
+        padding-right: 8%;
+     
+        background-color: #e5e5e5;
+        padding-top: 16px;
+       
     }
     
     .midbox {
         padding: 0px;
     }
     
+.mobile-ad-wrap {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    width: 90%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }
