@@ -6,12 +6,8 @@
     overflow: hidden;
 }
 
-.ad-image {
-	width: 100%;
-}
 
 .midbox {
-
     padding: 13px;
 }
 
@@ -59,6 +55,7 @@ p {
 
 .adlink {
     text-decoration: none;
+    position: relative;
 }
 
 .pokemon-slider {
@@ -226,7 +223,6 @@ p {
 
 
 
-
 /* Анимация при класе ШОВН */ 
 :root{
     --transitiontime: 0.35s;
@@ -310,4 +306,42 @@ p {
 
 
 
+
 /* Анимация при класе ШОВН КОНЕЦ*/ 
+
+
+
+
+@media (max-width:600px) {
+
+    .ad-image {
+        height: 564.1px;
+        display: none;
+    }
+    .adImageBg {
+        /* position: absolute; */
+        top:50.9px;
+        left: 303.3px;
+        width: 80%;
+        padding: 5%
+        /* height: 100%; */
+    }
+    .mobile-ad {
+        display: flex;
+        justify-content: center;
+        margin-top: 23.3px;
+        margin-bottom: 8.9px;
+    }
+
+    .adDesc {
+        margin-bottom: 50px;
+        text-align: center;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    
+    .midbox {
+        padding: 0px;
+    }
+    
+}

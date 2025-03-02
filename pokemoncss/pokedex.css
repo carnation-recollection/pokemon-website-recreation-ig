@@ -7,3 +7,27 @@ p {
 	margin-bottom: 10px;
 	font-weight: bold;
 }
+
+.plus {
+	background-color: #4592c4;
+	width: 70px;
+	height: 57px;
+	z-index: 120;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	/*! transform: translateY(-50%); */
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 69px;
+	cursor: pointer;
+	overflow: hidden;
+	border-top-left-radius: 10px;
+	user-select: none;
+}
+
+.plus:hover {
+	background-color: #30a7d7;
+}
