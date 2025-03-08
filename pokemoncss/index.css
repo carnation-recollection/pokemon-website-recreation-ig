@@ -328,8 +328,8 @@ p {
     .mobile-ad {
         display: flex;
         align-items: center;
-        margin-top: 23.3px;
-        margin-bottom: 8.9px;
+        margin-top: 23px;
+        margin-bottom: 23px;
         flex-direction: column;
     }
 
@@ -352,8 +352,8 @@ p {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    width: 90%;
-    margin-bottom: 5px;
+    width: calc(100% - 23px*2);
+    /*! margin-bottom: 5px; */
     border-radius: 10px;
     overflow: hidden;
   }

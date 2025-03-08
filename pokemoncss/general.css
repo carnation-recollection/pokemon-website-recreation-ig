@@ -612,9 +612,10 @@ option {
 
 	.item {
 		width: 100%;
-
-		height: auto;
+		font-size: 25.1px;
+		height: 73.7px;
 	}
+
 
 	.item:hover,
 	.item:hover>a {
@@ -681,7 +682,7 @@ option {
 	}
 
 	.mainbox {
-		margin-top: 60px;
+		margin-top: 75px;
 	}
 
 
@@ -711,11 +712,7 @@ option {
 		height: 90px;
 	} */
 
-	.item {
-		font-size: 25.1px;
-		height: 73.7px;
-	}
-
+	
 	.cards.item {
 		font-size: 12px;
 		padding: 7px;
