@@ -42,22 +42,24 @@ let sandwich = document.querySelector(".sandwich-box")
 function showMobileMenu() {
     mobileMenu.style.opacity = 1
     mobileMenu.style.visibility = "visible"
+     меню = "открыто"
 }
 
 function closeMobileMenu() {
     mobileMenu.style.opacity = 0
     mobileMenu.style.visibility = "hidden"
+    меню = "закрыто"
 }
 
 let меню = "закрыто"
 function переключитьМеню(){
     if(меню == "открыто" ){
         closeMobileMenu()
-        меню = "закрыто"
+     
     }    
     else {
         showMobileMenu()
-        меню = "открыто"
+       
     }
 }
 
@@ -65,6 +67,11 @@ function переключитьМеню(){
 sandwich.addEventListener("click", function (e) {
     переключитьМеню()
 });
+
+//если мы нажимаем там, где кнопок меню и сэндвича нет - меню закрывается
+ 
+let sandwichImage = document.querySelector(".sandwich")
+let sandwichButton = document.querySelector(".sandwich-box")
 
 
 //при клике по грей боксу окно будет закрываться 
@@ -74,6 +81,21 @@ grayBox.addEventListener("click", function (e) {
         closesearch()
     }
 });
+
+ let body = document.querySelector("body")
+
+ body.addEventListener("click", function (e) {
+    e = window.event || e;
+     if (e.target === sandwichButton ||e.target === sandwichImage) {
+       // то ничего
+    }
+    else {
+        closeMobileMenu()
+      
+    }
+});
+
+
 
 function showpokemon() {
 
