@@ -23,25 +23,6 @@ if (!secondCardFits) {
     activateCard(Math.min(cardsInHalfScreen, cards.length - 1));
 }
 
-// Функции для кнопок тоже нужно адаптировать:
-function sliderScrollLeft() {
-    if (currentCard > 0) {
-        activateCard(currentCard - 1);
-        // Смещаем слайдер с учетом -2
-        sliderPosition = -(currentCard - 2) * cardWidth;
-        moveSliderTo(sliderPosition);
-    }
-}
-
-function sliderScrollRight() {
-    if (currentCard < cards.length - 1) {
-        activateCard(currentCard + 1);
-        // Смещаем слайдер с учетом -2
-        sliderPosition = -(currentCard - 2) * cardWidth;
-        moveSliderTo(sliderPosition);
-    }
-}
-
 // Убирает класс shown со всех карточек
 function clearShown() {
     cards.forEach((card) => {
@@ -70,6 +51,7 @@ let savedPosition = 0;
 const slider = document.querySelector(".pokesliderwrap");
 
 function swipeStart(event) {
+    // alert("начал тянуть")
     savedPosition = sliderPosition;
     slider.classList.add("noTransition");
     clickStartPoint = event.clientX;
@@ -83,8 +65,8 @@ function swipeAction(event) {
     const shift = currentPoint - clickStartPoint + savedPosition;
     
     // Ограничиваем движение за пределы слайдера
-    const maxPosition = 0;
-    const minPosition = -(cards.length - 1) * cardWidth;
+    const maxPosition = cardWidth*2;
+    const minPosition = -(cards.length -3 ) * cardWidth;
     
     if (shift > maxPosition) {
         // Эффект "оттягивания" при достижении левого края
@@ -104,24 +86,90 @@ function swipeAction(event) {
 }
 
 function swipeEnd() {
-    slider.classList.remove("noTransition");
-    mouseActive = false;
+    if(mouseActive === true ){
+        slider.classList.remove("noTransition");
+        mouseActive = false;
+        
+        // Границы, за которыми нужно выравнивать
+        const leftBoundary = cardWidth*2; // Левая граница (стартовая позиция)
+        const rightBoundary = -(cards.length - 3) * cardWidth; // Правая граница
+        
+        // Проверяем, вышли ли мы за границы
+        if (sliderPosition > leftBoundary ) {
+            // Если вышли за границы - выравниваем
+           
+            moveSliderTo(leftBoundary) 
+        }
+        if (sliderPosition < rightBoundary) {
+            // Если вышли за границы - выравниваем
+           
+            moveSliderTo(rightBoundary ) 
+        }
+        // alert("Закончил тянуть")
+        // Иначе оставляем слайдер в текущей позиции (не выравниваем)
+    }
+   
+}
+// Добавляем переменную для контроля анимации
+let isAnimating = false;
+
+// Модифицируем функции кнопок
+function sliderScrollLeft() {
+    if (isAnimating || currentCard <= 0){
+
+    }
+    else{
+        isAnimating = true;
+        activateCard(currentCard - 1);
+        sliderPosition = -(currentCard - 2) * cardWidth;
+        
+        slider.classList.remove("noTransition");
+        moveSliderTo(sliderPosition);
+        
+        // Разрешаем следующую анимацию после завершения
+        setTimeout(() => {
+            isAnimating = false;
+        }, 550); // Время должно совпадать с CSS transition
+    }
     
-    // Выравниваем положение после отпускания мыши
-    const targetCard = Math.round(-sliderPosition / cardWidth) + 2;
-    activateCard( Math.max(0, Math.min(targetCard, cards.length - 1)) );
-    updateSliderPosition();
+   
 }
 
+function sliderScrollRight() {
+    if (isAnimating || currentCard >= cards.length - 1) {
+       
+    }
+    else{
+        isAnimating = true;
+        activateCard(currentCard + 1);
+        sliderPosition = -(currentCard - 2) * cardWidth;
+        
+        slider.classList.remove("noTransition");
+        moveSliderTo(sliderPosition);
+        
+        setTimeout(() => {
+            isAnimating = false;
+        }, 550);
+    }
+   
+}
+
+// Обновляем moveSliderTo для отмены анимации при ручном перетаскивании
 function moveSliderTo(pointX) {
     slider.style.transform = `translateX(${pointX}px)`;
     sliderPosition = pointX;
+    
+    // Если это не программная анимация, сбрасываем флаг
+    if (!mouseActive && !isAnimating) {
+        isAnimating = false;
+    }
 }
 
 // Добавляем обработчики событий
 if (slider) {
     slider.addEventListener('mousedown', swipeStart);
     document.addEventListener('mousemove', swipeAction);
+
     document.addEventListener('mouseup', swipeEnd);
     
     // Обработка выхода мыши за пределы окна
